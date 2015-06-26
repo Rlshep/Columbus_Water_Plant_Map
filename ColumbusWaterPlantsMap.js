@@ -1,17 +1,18 @@
-var DRWP_TITLE = "DRWP - The Dublin Road Water Plant utilizes surface water from the Griggs and O'Shaughnessy Reservoirs on the Scioto River and serves downtown Columbus, western, and southwestern Franklin County.";
-var DRWP_URL = 'https://drive.google.com/file/d/0B5uB9Fw1I1W_MjYyOGlBWUNNTDQ/view?usp=sharing';
-var PAWP_TITLE = "DRWP - The Dublin Road Water Plant utilizes surface water from the Griggs and O'Shaughnessy Reservoirs on the Scioto River and serves downtown Columbus, western, and southwestern Franklin County.";
-var PAWP_URL = 'https://drive.google.com/file/d/0B5uB9Fw1I1W_MjYyOGlBWUNNTDQ/view?usp=sharing';
-var HCWP_TITLE = "HCWP - The Hap Cremean Water Plant (HCWP; the upper area) utilizes surface water from the Hoover Reservoir on Big Walnut Creek and serves OSU and the northern half of Franklin County.";
-var HCWP_URL = 'https://drive.google.com/file/d/0B5uB9Fw1I1W_cXlVbWNKemQ0MHc/view?usp=sharing';
 
-function initialize() {
+function initializeMap(zoomLevel) {
+	var DRWP_TITLE = "DRWP - The Dublin Road Water Plant utilizes surface water from the Griggs and O'Shaughnessy Reservoirs on the Scioto River and serves downtown Columbus, western, and southwestern Franklin County.";
+	var DRWP_URL = 'https://drive.google.com/file/d/0B5uB9Fw1I1W_MjYyOGlBWUNNTDQ/view?usp=sharing';
+	var PAWP_TITLE = "DRWP - The Dublin Road Water Plant utilizes surface water from the Griggs and O'Shaughnessy Reservoirs on the Scioto River and serves downtown Columbus, western, and southwestern Franklin County.";
+	var PAWP_URL = 'https://drive.google.com/open?id=0B5uB9Fw1I1W_NjdFX2l6SnBucVE';
+	var HCWP_TITLE = "HCWP - The Hap Cremean Water Plant (HCWP; the upper area) utilizes surface water from the Hoover Reservoir on Big Walnut Creek and serves OSU and the northern half of Franklin County.";
+	var HCWP_URL = 'https://drive.google.com/file/d/0B5uB9Fw1I1W_cXlVbWNKemQ0MHc/view?usp=sharing';
+
 	var mapOptions = {
 		center : {
 			lat : 39.9829515,
 			lng : -82.990829
 		},
-		zoom : 11
+		zoom : zoomLevel
 	};
 
 	var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -161,6 +162,5 @@ function initialize() {
 		});
 	});
 	hcwpPolygon.setMap(map);
-}
+};
 
-google.maps.event.addDomListener(window, 'load', initialize);
