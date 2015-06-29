@@ -44,6 +44,11 @@ var ColumbusWaterPlantsMap = {
 			fillOpacity : 0.35
 		});
 
+		ColumbusWaterPlantsMap.setMouseEvents(polygon, params);
+		polygon.setMap(map);
+	},
+	
+	setMouseEvents: function(polygon, params) {
 		google.maps.event.addListener(polygon, 'click', function (event) {
 			window.location.href = params.url;
 		});
@@ -59,8 +64,6 @@ var ColumbusWaterPlantsMap = {
 				fillColor : params.mainColor
 			});
 		});
-		
-		polygon.setMap(map);
 	},
 	
 	addDublinRoadWaterPlantToMap: function(map) {
