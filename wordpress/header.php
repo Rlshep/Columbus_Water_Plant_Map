@@ -29,8 +29,12 @@
 	<?php wp_head(); ?>
 	
 	<!-- Google Maps -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsc05XOQz7VGu7NTk9ktaG_CrAflFltjE"></script>
-	<script type="text/javascript" src="<?php echo includes_url('js/ColumbusWaterPlantsMap.js');?>"></script>
+	<?php
+		wp_register_script('googlemaps', "https://maps.googleapis.com/maps/api/js?key=AIzaSyCsc05XOQz7VGu7NTk9ktaG_CrAflFltjE");
+        wp_enqueue_script('googlemaps');
+		wp_register_script('ColumbusWaterPlantsMap', includes_url('js/ColumbusWaterPlantsMap.js', __FILE__), null,'1.0', true);
+		wp_enqueue_script('ColumbusWaterPlantsMap'); 
+	?>
 </head>
 <body 
 	<?php 
