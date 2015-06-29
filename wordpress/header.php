@@ -39,8 +39,8 @@
 <body 
 	<?php 
 		body_class(); 
-		if (is_page(1736)) { echo 'onload="initializeMap(10)" onunload="GUnload()"'; } 
-		if (is_page(1750)) { echo 'onload="initializeMap(11)" onunload="GUnload()"'; } 
+		if (is_page(1736)) { echo 'onload="ColumbusWaterPlantsMap.initializeMap(10)" onunload="GUnload()"'; } 
+		if (is_page(1750)) { echo 'onload="ColumbusWaterPlantsMap.initializeMap(11)" onunload="GUnload()"'; } 
 	?>>
 	<div class="skip-content"><a href="#content"><?php _e( 'Skip to content', 'titan' ); ?></a></div>
 	<div id="header" class="clear">
